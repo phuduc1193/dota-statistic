@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="app">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Learning AngularJs">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript,AngularJs">
+  <meta name="author" content="Duc Truong">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AngularJs App</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Custom js -->
+  <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body ng-cloak>
+  <md-content>
+    <ng-include src="'views/partials/_navbar.html'"></ng-include>
+  </md-content>
+
+  <md-content class="md-padding" ui-view></md-content>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.js"></script>
+  <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js.map"></script>
+
+  <!-- Custom js -->
+  <script src="src/js/main.js"></script>
+  <script src="src/js/controllers.js"></script>
+</body>
+</html>

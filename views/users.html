@@ -1,0 +1,37 @@
+<h2>Users Dataview</h2>
+<div class="pull-right">
+  <div class="form-group">
+    <input class="form-control" type="text" ng-model="searchField" placeholder="Search table..."/>
+  </div>
+</div>
+
+
+<table search-watch-model="searchField" st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+  <thead>
+  	<tr>
+  		<th st-sort="username">Username</th>
+			<th st-sort="password">Password</th>
+			<th st-sort="client">Client</th>
+			<th st-sort="is_admin">Admin</th>
+			<th class="hidden-xs" st-sort="created_at">Created At</th>
+			<th class="hidden-xs" st-sort="updated_at">Updated At</th>
+  	</tr>
+	</thead>
+	<tbody>
+  	<tr ng-repeat="row in displayedCollection">
+  		<td>{{row.username}}</td>
+  		<td>{{row.password}}</td>
+  		<td>{{row.client ? row.client : "No Client"}}</td>
+  		<td>{{row.is_admin == 1 ? "Yes" : "No"}}</td>
+  		<td class="hidden-xs">{{row.created_at}}</td>
+  		<td class="hidden-xs">{{row.updated_at}}</td>
+  	</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="5" class="text-center">
+				<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+			</td>
+		</tr>
+	</tfoot>
+</table>
