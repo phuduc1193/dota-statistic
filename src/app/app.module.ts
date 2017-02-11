@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RoutingModule } from './routing.module';
 
 import { AppComponent } from './app.component';
@@ -27,7 +26,6 @@ import { PageNotFoundComponent } from './not-found.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgbModule.forRoot(),
     RoutingModule
   ],
   providers: [],
