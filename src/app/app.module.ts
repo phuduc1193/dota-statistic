@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
-
+import { MaterialModule } from '@angular/material';
 import { RoutingModule } from './routing.module';
 
 import { AppComponent } from './app.component';
@@ -26,7 +26,8 @@ import { PageNotFoundComponent } from './not-found.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RoutingModule
+    RoutingModule,
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
