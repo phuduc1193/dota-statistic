@@ -1,13 +1,16 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed"
+      (click)="isCollapsed = !isCollapsed" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a routerLink="" class="brand"><img src="assets/logo.png" alt=""><strong>DT</strong></a>
+      <a routerLink="" class="brand">
+        <img src="assets/logo.png" alt=""><strong>DucTruong</strong>
+      </a>
     </div>
 
     <div class="collapse navbar-collapse" [class.collapse]="isCollapsed">

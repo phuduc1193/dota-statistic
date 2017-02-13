@@ -1,7 +1,3 @@
-.brand img {
-  height: 50px;
-}
-
 /* Animation Timers
 ---------------------------------*/
 .delay-02s { 
@@ -46,4 +42,79 @@
 .delay-12s { 
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
+}
+
+html, body {
+  height: 100%;
+}
+
+.brand img {
+  height: 50px;
+}
+a.brand {
+	font-weight: bold;
+	color: rgba(174, 29, 4, 0.7);
+}
+a.brand:hover, a.brand:active {
+	color: rgba(174, 29, 4, 0.9);
+	text-decoration: none;
+}
+
+header {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url(assets/background.jpg);
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+ 	padding: 150px 0;
+}
+@media (min-width: 768px){
+	header {
+    min-height: 100%;
+	}
+}
+header h1 {
+	font-weight: bold;
+	color: #fff;
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+}
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+hr {
+    border-color: #F05F40;
+    border-width: 3px;
+    max-width: 50px;
+}
+header .link {
+	padding: 15px 30px;
+	border: none;
+  border-radius: 300px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #F05F40;
+  border-color: #F05F40;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+header .link:hover, header .link:active, header .link:focus {
+  color: #fff;
+  background-color: #ee4b28;
+  border-color: #ed431f;
+	text-decoration: none;
+}
+header p {
+	margin-bottom: 50px;
+	font-weight: 300;
+	font-size: 25px;
 }
