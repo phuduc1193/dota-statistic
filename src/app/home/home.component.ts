@@ -1,25 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  Component, OnInit,
+  trigger, state, animate, transition, style 
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  animations: [
+    trigger('visibilityChanged', [
+      state('true' , style({ opacity: 1, transform: 'scale(1.0)' })),
+      state('false', style({ opacity: 0, transform: 'scale(0.0)'  })),
+      transition('1 => 0', animate('500ms')),
+      transition('0 => 1', animate('900ms'))
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
-  rotateText: string;
+  fancyText: string
+  isVisible: boolean = true
+  textArr: Array<string>
 
   constructor() {
-    var textArr = ['Digital', 'Magical', 'Programming', 'Angular'];
-    var curNewsIndex = -1;
-    this.rotateText = textArr[0];
-    setInterval(() => {
-      ++curNewsIndex;
-      if (curNewsIndex >= textArr.length) {
-          curNewsIndex = 0;
-      }
-      this.rotateText = textArr[curNewsIndex];
-    }, 1000);
+    this.textArr = ['Digital', 'Magical', 'Programming', 'Angular']
+    this.fancyText = this.textArr[0]
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.animateFancyText()
+  }
+  
+  animateFancyText(){
+    let index: number = 0;
+    setInterval(() => {
+      ++index
+      if (index >= this.textArr.length) {
+          index = 0
+      }
+      this.isVisible = !this.isVisible
+      setTimeout(() => {
+        this.fancyText = this.textArr[index]
+        this.isVisible = !this.isVisible
+      }, 500)
+    }, 2000);
+  }
 }
