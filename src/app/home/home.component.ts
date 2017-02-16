@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   textArr: Array<string>
 
   constructor() {
-    this.textArr = ['Digital', 'Magical', 'Programming', 'Angular']
+    this.textArr = ['Digital', 'Magical', 'Angular']
     this.fancyText = this.textArr[0]
   }
 

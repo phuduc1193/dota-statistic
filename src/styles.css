@@ -72,7 +72,7 @@ header {
   width: 100%;
   height: 100%;
   text-align: center;
- 	padding: 150px 0;
+ 	padding: 100px 0;
 }
 @media (min-width: 768px){
 	header {
@@ -114,7 +114,15 @@ header .link:hover, header .link:active, header .link:focus {
 	text-decoration: none;
 }
 header p {
-	margin-bottom: 50px;
 	font-weight: 300;
-	font-size: 25px;
+	font-size: 20px;
+}
+header p:last-of-type {
+	margin-bottom: 30px;
+}
+
+@media (max-width: 360px){
+	.hidden-xxs {
+		display: none !important;
+	}
 }
