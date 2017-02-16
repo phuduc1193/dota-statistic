@@ -22,16 +22,22 @@ header {
   background-position: center;
   background-image: url(assets/background.jpg);
   color: #fff;
-  position: relative;
   text-align: center;
- 	padding: 15% 0;
  	width: 100%;
   height: 100%;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
 }
 @media (min-width: 768px){
 	header {
     min-height: 100%;
 	}
+}
+header .container {
+	padding-top: 10%;
 }
 header h1 {
 	font-weight: bold;
@@ -80,10 +86,15 @@ header p:last-of-type {
 		display: none !important;
 	}
 }
-
-@media (min-width: 992px){
-	header {
-		padding: 130px 0;
+@media (max-device-width: 736px) and (min-device-width: 320px) and (orientation: landscape){
+	.hidden-xxs {
+		display: none !important;
+	}
+	header h1 {
+		font-size: 25px;
+	}
+	header p {
+		font-size: 16px;
 	}
 }
 
