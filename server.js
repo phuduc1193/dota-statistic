@@ -2,6 +2,10 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
+setInterval(function() {
+  http.get("http://portfolio-duc-truong.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 const bodyParser = require('body-parser');
 
 // Get our API routes
